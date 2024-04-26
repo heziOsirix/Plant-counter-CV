@@ -2,7 +2,7 @@
 import sys
 import numpy as np
 import cv2
-from . import global_functions
+import global_functions
 import os
 TB_WIN_LABEL = "Trackbars"
 
