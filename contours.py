@@ -6,7 +6,7 @@ import os
 import sys
 import numpy as np
 import cv2
-from global_functions import ensureDir
+#from global_functions import ensureDir
 
 def main(path):
   src = cv2.imread(path)
@@ -26,7 +26,7 @@ def main(path):
     if perimeter > PERIMETER_LIMIT:
       plantsNumber += 1
       val = (i+1) * colorStep
-      cv2.drawContours(src, [contours[i]], -1, (val,val,val), LINE_WIDTH)
+      cv2.drawContours(src, [contours[i]], -1, (255,0,0), LINE_WIDTH)
       print("(" + str(val) + "," + str(val) + "," + str(val) + ") : " + str(perimeter))
   
   print("\n" + str(plantsNumber) + " plants.")
